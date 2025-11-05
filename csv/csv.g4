@@ -1,0 +1,10 @@
+grammar csv;
+prog:   (row NEWLINE)*;
+row:    field (SEP field)*;
+field:  TEXT | NUMBER | STRING;
+TEXT:   [a-zA-Z0-9_-]+;
+NUMBER: '-'?[0-9]+('.'[0-9]+)?;
+STRING: '"' ~["\r\n]* '"' ;
+SEP:    ',' | ';' | '|';
+NEWLINE:'\r\n' | '\r' | '\n' ;
+BLANK:  ' '+ -> skip;
