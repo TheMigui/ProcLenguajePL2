@@ -2,7 +2,7 @@ grammar csv;
 prog:   (row NEWLINE)*;
 row:    field (SEP field)*;
 field:  TEXT | NUMBER | STRING;
-TEXT:   ~[;,|\r\n]+;
+TEXT:   ~[;,|\r\n \t] (~[;,|\r\n]* ~[;,|\r\n \t])?;
 NUMBER: '-'?[0-9]+('.'[0-9]+)?;
 STRING: '"' ~["\r\n]* '"' ;
 SEP:    ',' | ';' | '|';
