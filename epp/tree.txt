@@ -1,0 +1,41 @@
+
+prog:  \r\n  
+  line:  
+    statement:  
+      assignment:  asignar  a  =  
+        expr:  
+          term:  20  
+        ;P  
+  \r\n  \r\n  \r\n  
+  line:  
+    cond_line:  
+      comp:  
+        expr:  
+          term:  a  
+        >  
+        expr:  
+          term:  2  
+      ???  
+  \r\n  
+  line:  
+    statement:  
+      ifStmt:  si  ->  \r\n  
+        block:  
+          statement:  
+            simpleAssign:  a  =  
+              expr:  
+                expr:  
+                  term:  5  
+                -  
+                term:  2  
+              ;P  
+          \r\n  
+        terminarStmt:  terminar  
+  \r\n  \r\n  \r\n  
+  line:  
+    statement:  
+      show:  mostrar  
+        expr:  
+          term:  a  
+        ;P  
+  \r\n  <EOF>  

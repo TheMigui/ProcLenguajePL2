@@ -1,18 +1,51 @@
-prog:
-  row:
-    field:
-      "Esto es una cadena"
-  \n
-  row:
-    field:
-      texto
-    ,
-    field:
-      Mas_texto-con
-  <missing
-  NEWLINE>
-  row:
-    field:
-      simbolos
-  <missing
-  NEWLINE>
+
+prog:  
+  row:  
+    field:  Type  
+    ,  
+    field:  Fast  Moves  
+    ,  
+    field:  DPS  
+    ,  
+    field:  Power-PvP  
+    ,  
+    field:  Energy-PvP  
+    ,  
+    field:  Cast  Time  
+    ,  
+    field:  Turns  
+    ,  
+    field:  DPT  
+    ,  
+    field:  EPT  
+  \r\n  
+  row:  
+    field:  Ste  
+    ,  
+    field:  Steel  Wing  
+    ,  
+    field:  "13,8"  ,  
+    field:  11-7  
+    ,  
+    field:  6-5  
+    ,  
+    field:  "0,8s"  ,  
+    field:  2  
+    ,  
+    field:  "3,5"  ,  
+    field:  "2,5"  \r\n  
+  row:  
+    field:  Dra  
+    ,  
+    field:  Dragon  Tail  
+    ,  
+    field:  "13,6"  ,  
+    field:  15-9  
+    ,  
+    field:  9-10  
+    ,  
+    field:  "1,1s"  ,  
+    field:  3  
+    ,  
+    field:  "3,0"  ,  
+    field:  "3,3"  \r\n  

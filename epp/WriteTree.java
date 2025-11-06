@@ -9,9 +9,9 @@ public class WriteTree {
         if (args.length>0 && args[0].length()>3 && args[0].substring(args[0].length()-4).equals(".txt")){
             System.out.println("Reading from file: " + args[0]);
             CharStream cs = CharStreams.fromFileName(args[0]);
-            csvLexer lexer = new csvLexer(cs);
+            eppLexer lexer = new eppLexer(cs);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            csvParser parser = new csvParser(tokens);
+            eppParser parser = new eppParser(tokens);
 
             ParseTree tree = parser.prog();
 
@@ -22,9 +22,9 @@ public class WriteTree {
             String input = args.length > 0 ? args[0] : "\"a b\", 1\n";
             System.out.println("Input: " + input);
             CharStream cs = CharStreams.fromString(input);
-            csvLexer lexer = new csvLexer(cs);
+            eppLexer lexer = new eppLexer(cs);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            csvParser parser = new csvParser(tokens);
+            eppParser parser = new eppParser(tokens);
 
             ParseTree tree = parser.prog();
 
