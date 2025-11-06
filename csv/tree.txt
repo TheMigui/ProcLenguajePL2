@@ -1,0 +1,18 @@
+prog:
+  row:
+    field:
+      "Esto es una cadena"
+  \n
+  row:
+    field:
+      texto
+    ,
+    field:
+      Mas_texto-con
+  <missing
+  NEWLINE>
+  row:
+    field:
+      simbolos
+  <missing
+  NEWLINE>
