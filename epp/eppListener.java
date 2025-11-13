@@ -87,6 +87,16 @@ public interface eppListener extends ParseTreeListener {
 	 */
 	void exitIfStmt(eppParser.IfStmtContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link eppParser#whileStmt}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhileStmt(eppParser.WhileStmtContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link eppParser#whileStmt}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhileStmt(eppParser.WhileStmtContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link eppParser#terminarStmt}.
 	 * @param ctx the parse tree
 	 */
@@ -107,16 +117,6 @@ public interface eppListener extends ParseTreeListener {
 	 */
 	void exitBlock(eppParser.BlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link eppParser#comp}.
-	 * @param ctx the parse tree
-	 */
-	void enterComp(eppParser.CompContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link eppParser#comp}.
-	 * @param ctx the parse tree
-	 */
-	void exitComp(eppParser.CompContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link eppParser#expr}.
 	 * @param ctx the parse tree
 	 */
@@ -136,4 +136,34 @@ public interface eppListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTerm(eppParser.TermContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link eppParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFactor(eppParser.FactorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link eppParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFactor(eppParser.FactorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link eppParser#boolExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolExpr(eppParser.BoolExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link eppParser#boolExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolExpr(eppParser.BoolExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link eppParser#compOp}.
+	 * @param ctx the parse tree
+	 */
+	void enterCompOp(eppParser.CompOpContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link eppParser#compOp}.
+	 * @param ctx the parse tree
+	 */
+	void exitCompOp(eppParser.CompOpContext ctx);
 }
