@@ -57,11 +57,6 @@ block
     : (NEWLINE | statement | COMMENT_LINE)*
     ;
 
-// ========================
-// EXPRESIONES
-// ========================
-
-// Expresiones aritméticas
 expr
     : expr '+' term
     | expr '-' term
@@ -82,7 +77,6 @@ factor
     | STRING
     ;
 
-// Expresiones booleanas
 boolExpr
     : boolExpr OR boolExpr
     | boolExpr AND boolExpr
