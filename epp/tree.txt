@@ -4,30 +4,32 @@ prog:  \r\n
     statement:  
       assignment:  asignar  a  =  
         expr:  
-          term:  20  
+          term:  
+            factor:  20  
         ;P  
   \r\n  \r\n  \r\n  
   line:  
-    cond_line:  
-      comp:  
-        expr:  
-          term:  a  
-        >  
-        expr:  
-          term:  2  
-      ???  
-  \r\n  
-  line:  
     statement:  
-      ifStmt:  si  ->  \r\n  
+      ifStmt:  
+        boolExpr:  
+          expr:  
+            term:  
+              factor:  a  
+          compOp:  >  
+          expr:  
+            term:  
+              factor:  2  
+        ???  \r\n  si  ->  \r\n  
         block:  
           statement:  
             simpleAssign:  a  =  
               expr:  
                 expr:  
-                  term:  5  
+                  term:  
+                    factor:  5  
                 -  
-                term:  2  
+                term:  
+                  factor:  2  
               ;P  
           \r\n  
         terminarStmt:  terminar  
@@ -36,6 +38,7 @@ prog:  \r\n
     statement:  
       show:  mostrar  
         expr:  
-          term:  a  
+          term:  
+            factor:  a  
         ;P  
   \r\n  <EOF>  

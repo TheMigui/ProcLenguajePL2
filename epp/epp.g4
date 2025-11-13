@@ -20,6 +20,7 @@ statement
     | simpleAssign
     | show
     | ifStmt
+    | whileStmt
     ;
 
 assignment
@@ -35,13 +36,17 @@ show
     ;
 
 cond_line
-    : comp QMARKS
+    : boolExpr QMARKS
     ;
 
 ifStmt
-    : (comp QMARKS)? SI ARROW (NEWLINE)* block
+    : (boolExpr QMARKS (NEWLINE)*)? SI ARROW (NEWLINE)* block
       (NO ARROW (NEWLINE)* block)?
       terminarStmt
+    ;
+
+whileStmt
+    : (boolExpr QMARKS (NEWLINE)*)? MIENTRAS ARROW (NEWLINE)* block terminarStmt
     ;
 
 terminarStmt
@@ -52,10 +57,6 @@ block
     : (NEWLINE | statement | COMMENT_LINE)*
     ;
 
-comp
-    : expr (('<' | '>' | '<=' | '>=' | '==' | '!=') expr)
-    ;
-
 expr
     : expr '+' term
     | expr '-' term
@@ -63,10 +64,30 @@ expr
     ;
 
 term
+    : term '*' factor
+    | term '/' factor
+    | factor
+    ;
+
+factor
     : '(' expr ')'
+    | '-' factor
     | NUMBER
     | ID
     | STRING
+    ;
+
+boolExpr
+    : boolExpr OR boolExpr
+    | boolExpr AND boolExpr
+    | NOT boolExpr
+    | expr compOp expr
+    | '(' boolExpr ')'
+    | expr
+    ;
+
+compOp
+    : '==' | '!=' | '<=' | '>=' | '<' | '>'
     ;
 
 // ========================
@@ -78,12 +99,17 @@ MOSTRAR : 'mostrar';
 SI      : 'si';
 NO      : 'no';
 TERMINAR: 'terminar';
+MIENTRAS: 'mientras';
 ARROW   : '->';
 QMARKS  : '???';
 END     : ';' [ \t]* 'P';
 
+AND     : '&&';
+OR      : '||';
+NOT     : '!';
+
 ID      : [a-zA-Z_] [a-zA-Z0-9_]*;
-NUMBER  : '-'? [0-9]+ ('.' [0-9]+)?;
+NUMBER  : [0-9]+ ('.' [0-9]+)?;
 STRING  : '"' ~["\r\n]* '"';
 
 COMMENT_LINE
