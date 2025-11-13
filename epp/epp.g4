@@ -39,7 +39,7 @@ cond_line
     ;
 
 ifStmt
-    : (comp QMARKS)? SI ARROW (NEWLINE)* block
+    : (comp QMARKS (NEWLINE)*)? SI ARROW (NEWLINE)* block
       (NO ARROW (NEWLINE)* block)?
       terminarStmt
     ;
@@ -64,6 +64,7 @@ expr
 
 term
     : '(' expr ')'
+    | '-' term
     | NUMBER
     | ID
     | STRING
@@ -83,7 +84,7 @@ QMARKS  : '???';
 END     : ';' [ \t]* 'P';
 
 ID      : [a-zA-Z_] [a-zA-Z0-9_]*;
-NUMBER  : '-'? [0-9]+ ('.' [0-9]+)?;
+NUMBER  : [0-9]+ ('.' [0-9]+)?;
 STRING  : '"' ~["\r\n]* '"';
 
 COMMENT_LINE
