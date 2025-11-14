@@ -18,7 +18,7 @@ public class IKEAParser extends Parser {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, NOMBRE=17, 
-		ID=18, NUM=19, STRING=20, WS=21;
+		ID=18, NUM=19, STRING=20, WS=21, COMENTARIO=22;
 	public static final int
 		RULE_prog = 0, RULE_declaracion = 1, RULE_paso = 2, RULE_instruccion = 3, 
 		RULE_herramienta = 4, RULE_herraje = 5, RULE_pieza = 6, RULE_montaje = 7, 
@@ -33,7 +33,7 @@ public class IKEAParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "';'", "','", "'Usable'", "'PASO '", "':'", "' CON '", "'MONTAR'", 
+			null, "';'", "','", "'Usable'", "'PASO '", "':'", "' CON '", "' MONTAR'", 
 			"'{'", "'}'", "' FIJAR'", "'NOTA '", "'HERRAMIENTA '", "'HERRAJE '", 
 			"'PIEZA '", "'MONTAJE '", "'*'"
 		};
@@ -42,7 +42,8 @@ public class IKEAParser extends Parser {
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, "NOMBRE", "ID", "NUM", "STRING", "WS"
+			null, null, null, null, null, "NOMBRE", "ID", "NUM", "STRING", "WS", 
+			"COMENTARIO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -735,7 +736,7 @@ public class IKEAParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001\u0015u\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001\u0016u\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0001\u0000\u0001\u0000\u0004\u0000\u0015\b\u0000\u000b\u0000"+
