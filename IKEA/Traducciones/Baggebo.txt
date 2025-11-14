@@ -26,5 +26,5 @@ MONTAJE Baggebo MONTAR{HERRAJE 100827*2};
 MONTAJE Baggebo MONTAR{HERRAJE 10119123*2};
 
 PASO 7:
-NOTA "Si quieres atornillar la estantería a la pared en la pieza 10062215 hay un hueco por donde pasar un tornillo."
+NOTA "Si quieres atornillar la estantería a la pared en la pieza 10062215 hay un hueco por donde pasar un tornillo.";
 MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{}; 
