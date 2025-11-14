@@ -12,8 +12,8 @@ paso
     ;
     
 instruccion
-    : montaje ('CON '(herramienta | herraje) | 'MONTAR') '(' ((pieza | herraje | montaje) (',' (pieza | herraje | montaje))*)? ')'
-    | montaje ('CON 'herramienta)? 'FIJAR' '(' herraje ')'
+    : montaje (' CON ' (herramienta | herraje) | 'MONTAR') '{' ((pieza | herraje | montaje) (',' (pieza | herraje | montaje))*)? '}'
+    | montaje (' CON ' herramienta)? ' FIJAR' '{' herraje '}'
     | 'NOTA ' STRING
     ;
 
@@ -37,7 +37,8 @@ cantidad
     : '*' NUM
     ;
 
-NOMBRE  : ([a-zA-Z]|' ')+ ;
+NOMBRE  : ([a-zA-Z])+ ;
 ID      : [0-9][0-9][0-9][0-9][0-9][0-9]([0-9][0-9])? ;
 NUM     : [0-9]+ ;
 STRING  : '"' (~[;"\r\n])* '"' ;
+WS      : [ \t\r\n]+ -> skip ;

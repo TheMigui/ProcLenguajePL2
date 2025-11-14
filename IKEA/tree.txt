@@ -1,0 +1,26 @@
+
+prog:  
+  declaracion:  
+    herramienta:  HERRAMIENTA  martillo  
+    ;  
+    herraje:  HERRAJE  123456  
+      cantidad:  *  1  
+    ;  
+  paso:  PASO  1  :  
+    instruccion:  
+      montaje:  MONTAJE  mueble  
+      CON  
+      herramienta:  HERRAMIENTA  martillo  
+      {  
+      pieza:  PIEZA  base  
+      ,  
+      herraje:  HERRAJE  123456  
+        cantidad:  *  1  
+      }  
+    ;  
+  paso:  PASO  2  :  
+    instruccion:  
+      montaje:  MONTAJE  mueble  
+      MONTAR  {  }  
+    ;  
+  <EOF>  
