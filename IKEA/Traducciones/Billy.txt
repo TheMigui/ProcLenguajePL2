@@ -22,14 +22,14 @@ MONTAJE Billy CON HERRAMIENTA DestornilladorCruz{PIEZA Lado1, Lado2, HERRAJE 118
 
 PASO 3:
 MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, TablaFina, Lado1};
-NOTA "El lado rugoso de las tablas debe apuntar hacia el fondo de la estantería y los agujeros hacia debajo."
+NOTA "El lado rugoso de las tablas debe apuntar hacia el fondo de la estantería y los agujeros hacia debajo.";
 
 PASO 4:
 MONTAJE Billy CON HERRAMIENTA DestornilladorPlano{HERRAJE 119081*4};
 
 PASO 5:
 MONTAJE Billy CON HERRAMIENTA DestornilladorPlano{PIEZA Tabla3, HERRAJE 119081*2};
-NOTA "El lado rugoso de la tabla debe apuntar hacia el fondo de la estantería y los agujeros hacia arriba."
+NOTA "El lado rugoso de la tabla debe apuntar hacia el fondo de la estantería y los agujeros hacia arriba.";
 
 PASO 6:
 MONTAJE Billy MONTAR{PIEZA Lado2};
