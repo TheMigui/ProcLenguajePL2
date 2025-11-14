@@ -1,0 +1,88 @@
+---------------------------------------------------
+PROGRAMA KALLAX
+----------------------------------------------------
+
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Martillo;
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA Lapiz;
+HERRAMIENTA Nivel;
+
+HERRAJE 104321*8;
+HERRAJE 101339*22;
+HERRAJE 115753*2;
+HERRAJE 115754*2;
+HERRAJE 103693*2;
+HERRAJE 100092*,Usable;
+HERRAJE 121030*1;
+HERRAJE 10002300*2;
+
+
+
+----------------------------------------------------
+PASOS DEL MONTAJE
+----------------------------------------------------
+
+PASO 1:
+NOTA Insertar Llave Allan por un extremo en Herraje 121030
+MONTAJE Kallax MONTAR{PIEZA, Lateral1,Base, HERRAJE 104321*2, HERRAJE 121030};
+
+PASO 2:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Separador1, HERRAJE 101339*2 };
+
+PASO 3:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Estante1, HERRAJE 101339*2 };
+
+PASO 4:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Separador2, HERRAJE 101339*2 };
+
+PASO 5:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Estante2, HERRAJE 101339*2 };
+
+PASO 6:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Separador3, HERRAJE 101339*2 };
+
+PASO 7:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Estante3, HERRAJE 101339*2 };
+
+PASO 8:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Separador4, HERRAJE 101339*2 };
+
+PASO 9:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Estante4, HERRAJE 101339*2 };
+
+PASO 10:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Separador5, HERRAJE 101339*2 };
+
+PASO 11:
+MONTAJE Kallax CON HERRAMIENTA Martillo {PIEZA Estante5, HERRAJE 101339*2 };
+
+PASO 12:
+MONTAJE Kallax CON HERRAMIENTA Martillo {HERRAJE 101339*8 };
+
+PASO 13:
+MONTAJE Kallax MONTAR{PIEZA Lateral2 };
+
+Paso 14:
+MONTAJE Kallax MONTAR{PIEZA Base 2 };
+MONTAJE Kallax {HERRAJE 104321*6, HERRAJE 121030};
+
+PASO 15:
+NOTA  “Separe el HERRAJE 10002300 en cuatro partes”
+MONTAJE Kallax MONTAR{HERRAJE 10002300}
+
+PASO 16:
+
+MONTAJE Kallax MONTAR{HERRAJE 115753*2};
+MONTAJE Kallax CON HERRAMIENTA DestornilladorCruz {HERRAJE 100372*4 };
+
+PASO 17:
+NOTA “Marque con un lapiz la zona circular del HERRAJE 115753”
+
+PASO 18:
+NOTA “Ancle dos tornillos a la pared a la altura de los herrajes colocados en el paso 16”
+
+PASO 19:
+NOTA “El siguiente herraje se pondrá donde ha colocado los dos tornillos”
+MONTAJE Kallax CON HERRAMIENTA DestornilladorCruz {HERRAJE 103693*2 };
+MONTAJE Kallax MONTAR{HERRAJE 115754*2};
