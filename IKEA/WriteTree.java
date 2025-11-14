@@ -15,8 +15,8 @@ public class WriteTree {
 
             ParseTree tree = parser.prog();
 
-            // writeToFile(tree.toStringTree(parser));
-            System.out.println(tree.toStringTree(parser));
+            writeToFile(tree.toStringTree(parser));
+            // System.out.println(tree.toStringTree(parser));
             return;
         } else{
             String input = args.length > 0 ? args[0] : "\"a b\", 1\n";
