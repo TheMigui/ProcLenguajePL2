@@ -1,8 +1,4 @@
----------------------------------------------------
-PROGRAMA FLYSTA
-----------------------------------------------------
 
-declaracion
 HERRAMIENTA DestornilladorPlano;
 HERRAMIENTA DestornilladorCruz;
 HERRAMIENTA Lapiz;
@@ -15,14 +11,10 @@ HERRAJE 104321*8;
 HERRAJE 101339*6;
 HERRAJE 103693*2;
 HERRAJE 100372*4;
-HERRAJE 100092*Usable;
+HERRAJE 100092*1,Usable;
 HERRAJE 121030*1;
 HERRAJE 153550*2;
 HERRAJE 101345*16;
-
-----------------------------------------------------
-PASOS DEL MONTAJE
-----------------------------------------------------
 
 PASO 1:
 NOTA "Insertar Llave Allan por un extremo en Herraje 121030"
@@ -70,10 +62,9 @@ MONTAJE Flysta {HERRAJE 104321*6, HERRAJE 121030};
 
 PASO 15:
 NOTA  “Separe el HERRAJE 153550 en cuatro partes”
-MONTAJE Flysta MONTAR{HERRAJE 153550}
+MONTAJE Flysta MONTAR{HERRAJE 153550};
 
 PASO 16:
-
 MONTAJE Flysta MONTAR{HERRAJE 115753*2};
 MONTAJE Flysta CON HERRAMIENTA DestornilladorCruz {HERRAJE 100372*4};
 
