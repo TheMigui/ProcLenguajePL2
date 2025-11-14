@@ -1,0 +1,89 @@
+---------------------------------------------------
+PROGRAMA FLYSTA
+----------------------------------------------------
+
+declaracion
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Lapiz;
+HERRAMIENTA Nivel;
+HERRAMIENTA Martillo;
+
+HERRAJE 115753*2;
+HERRAJE 115754*2;
+HERRAJE 104321*8;
+HERRAJE 101339*6;
+HERRAJE 103693*2;
+HERRAJE 199372*4;
+HERRAJE 100092*Usable;
+HERRAJE 121030*1;
+HERRAJE 153550*2;
+HERRAJE 101345*16;
+
+----------------------------------------------------
+PASOS DEL MONTAJE
+----------------------------------------------------
+
+PASO 1:
+NOTA Insertar Llave Allan por un extremo en Herraje 121030
+MONTAJE Flysta MONTAR{PIEZA, Lateral1, Base, HERRAJE 104321*2, HERRAJE 121030};
+
+PASO 2:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Separador1, HERRAJE 101345*2 };
+
+PASO 3:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Estante1, HERRAJE 101345*2 };
+
+PASO 4:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Separador2, HERRAJE 101339*2 };
+
+PASO 5:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Estante2, HERRAJE 101339*2 };
+
+PASO 6:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Separador3, HERRAJE 101345*2 };
+
+PASO 7:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Estante3, HERRAJE 101339*2 };
+
+PASO 8:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Separador4, HERRAJE 101339*2 };
+
+PASO 9:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Estante4, HERRAJE 101345*2 };
+
+PASO 10:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Separador5, HERRAJE 101339*2 };
+
+PASO 11:
+MONTAJE Flysta CON HERRAMIENTA Martillo {PIEZA Estante5, HERRAJE 101339*2 };
+
+PASO 12:
+MONTAJE Flysta CON HERRAMIENTA Martillo {HERRAJE 101345*8 };
+
+PASO 13:
+MONTAJE Flysta MONTAR{PIEZA Lateral2 };
+
+Paso 14:
+MONTAJE Flysta MONTAR{PIEZA Base 2 };
+MONTAJE Flysta {HERRAJE 104321*6, HERRAJE 121030};
+
+PASO 15:
+NOTA  “Separe el HERRAJE 153550 en cuatro partes”
+MONTAJE Flysta MONTAR{HERRAJE 153550}
+
+PASO 16:
+
+MONTAJE Flysta MONTAR{HERRAJE 115753*2};
+MONTAJE Flysta CON HERRAMIENTA DestornilladorCruz {HERRAJE 100372*4 };
+
+PASO 17:
+NOTA “Marque con un lapiz la zona circular del HERRAJE 115753”
+
+PASO 18:
+NOTA “Ancle dos tornillos a la pared a la altura de los herrajes colocados en el paso 16”
+
+PASO 19:
+NOTA “El siguiente herraje se pondrá donde ha colocado los dos tornillos”
+MONTAJE Flysta CON HERRAMIENTA DestornilladorCruz {HERRAJE 103693*2 };
+MONTAJE Flysta MONTAR{HERRAJE 115754*2};
