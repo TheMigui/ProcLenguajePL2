@@ -15,13 +15,13 @@ HERRAJE 100823*4;
 HERRAJE 106989*2;
 
 PASO 1:
-MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, Tabla3, TablaFina, HERRAJE 101351*16};
+MONTAJE Billy MONTAR{PIEZA Tabla1,PIEZA Tabla2,PIEZA Tabla3,PIEZA TablaFina, HERRAJE 101351*16};
 
 PASO 2:
-MONTAJE Billy CON HERRAMIENTA DestornilladorCruz{PIEZA Lado1, Lado2, HERRAJE 118331*12};
+MONTAJE Billy CON HERRAMIENTA DestornilladorCruz{PIEZA Lado1,PIEZA Lado2, HERRAJE 118331*12};
 
 PASO 3:
-MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, TablaFina, Lado1};
+MONTAJE Billy MONTAR{PIEZA Tabla1,PIEZA Tabla2,PIEZA TablaFina,PIEZA Lado1};
 NOTA "El lado rugoso de las tablas debe apuntar hacia el fondo de la estantería y los agujeros hacia debajo.";
 
 PASO 4:
