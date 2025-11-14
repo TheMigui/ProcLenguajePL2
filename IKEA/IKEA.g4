@@ -34,7 +34,7 @@ montaje
     ;
 
 cantidad
-    : 'x' NUM
+    : '*' NUM
     ;
 
 NOMBRE  : ([a-zA-Z]|' ')+ ;
