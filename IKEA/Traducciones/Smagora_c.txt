@@ -1,0 +1,74 @@
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Martillo;
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA Lapiz;
+HERRAMIENTA CALIBRADOR;
+
+HERRAJE 101345*18;
+HERRAJE 118331*18;
+HERRAJE 119252*18;
+HERRAJE 115753*2;
+HERRAJE 115754*2;
+HERRAJE 122628*4;
+HERRAJE 107716*4;
+HERRAJE 110646*2;
+HERRAJE 103693*2;
+
+PASO 1:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz{PIEZA Base, HERRAJE 118331*16};
+
+PASO 2:
+MONTAJE Smagora MONTAR{PIEZA Repisa1, PIEZA Repisa2, HERRAJE 101345*8};
+
+PASO 3:
+MONTAJE Smagora MONTAR{PIEZA Repisa3, PIEZA Repisa4, HERRAJE 101345*8};
+
+PASO 4:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano{HERRAJE 119252*8};
+
+PASO 5:
+MONTAJE Smagora MONTAR{PIEZA Fondo};
+
+PASO 6:
+MONTAJE Smagora MONTAR{PIEZA Base2};
+
+PASO 7:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano{HERRAJE 119252*8};
+
+PASO 8:
+MONTAJE Smagora CON HERRAMIENTA Martillo{HERRAJE 122628*4};
+
+PASO 9:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz{HERRAJE 118331*2};
+
+PASO 10:
+MONTAJE Lateral MONTAR{PIEZA Lateral1, HERRAJE 101345*2};
+
+PASO 11:
+MONTAJE Smagora MONTAR{MONTAJE Lateral};
+
+PASO 12:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz{HERRAJE 119252*2};
+
+PASO 13:
+MONTAJE Smagora MONTAR{HERRAJE 115753*2};
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz{HERRAJE 107716*4};
+
+PASO 14:
+NOTA "Cuidado al colocar el mueble, asegurese de que quede sin espacio entre los muebles";
+
+PASO 15:
+MONTAJE Smagora CON HERRAMIENTA Lapiz{};
+
+PASO 16:
+NOTA "Retirar el mueble para seguir con la instalación";
+
+PASO 17:	
+NOTA "Colocar un tornillo que sirva por la ranura de la parte superior";
+
+PASO 18:
+NOTA "Colocar de nuevo el mueble para seguir con la instalación";
+
+PASO 19:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano{HERRAJE 103693*2};
+MONTAJE Smagora MONTAR{HERRAJE 115754*2};

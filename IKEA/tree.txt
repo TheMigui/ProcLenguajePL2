@@ -1,0 +1,207 @@
+
+prog:  
+  declaracion:  
+    herramienta:  HERRAMIENTA  DestornilladorCruz  
+    ;  
+    herramienta:  HERRAMIENTA  Martillo  
+    ;  
+    herramienta:  HERRAMIENTA  DestornilladorPlano  
+    ;  
+    herramienta:  HERRAMIENTA  Lapiz  
+    ;  
+    herramienta:  HERRAMIENTA  CALIBRADOR  
+    ;  
+    herraje:  HERRAJE  101345  
+      cantidad:  *  18  
+    ;  
+    herraje:  HERRAJE  118331  
+      cantidad:  *  18  
+    ;  
+    herraje:  HERRAJE  119252  
+      cantidad:  *  18  
+    ;  
+    herraje:  HERRAJE  115753  
+      cantidad:  *  2  
+    ;  
+    herraje:  HERRAJE  115754  
+      cantidad:  *  2  
+    ;  
+    herraje:  HERRAJE  122628  
+      cantidad:  *  4  
+    ;  
+    herraje:  HERRAJE  107716  
+      cantidad:  *  4  
+    ;  
+    herraje:  HERRAJE  110646  
+      cantidad:  *  2  
+    ;  
+    herraje:  HERRAJE  103693  
+      cantidad:  *  2  
+    ;  
+  paso:  PASO  1  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorCruz  
+      {  
+      pieza:  PIEZA  Base  
+      ,  
+      herraje:  HERRAJE  118331  
+        cantidad:  *  16  
+      }  
+    ;  
+  paso:  PASO  2  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      pieza:  PIEZA  Repisa1  
+      ,  
+      pieza:  PIEZA  Repisa2  
+      ,  
+      herraje:  HERRAJE  101345  
+        cantidad:  *  8  
+      }  
+    ;  
+  paso:  PASO  3  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      pieza:  PIEZA  Repisa3  
+      ,  
+      pieza:  PIEZA  Repisa4  
+      ,  
+      herraje:  HERRAJE  101345  
+        cantidad:  *  8  
+      }  
+    ;  
+  paso:  PASO  4  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorPlano  
+      {  
+      herraje:  HERRAJE  119252  
+        cantidad:  *  8  
+      }  
+    ;  
+  paso:  PASO  5  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      pieza:  PIEZA  Fondo  
+      }  
+    ;  
+  paso:  PASO  6  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      pieza:  PIEZA  Base2  
+      }  
+    ;  
+  paso:  PASO  7  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorPlano  
+      {  
+      herraje:  HERRAJE  119252  
+        cantidad:  *  8  
+      }  
+    ;  
+  paso:  PASO  8  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  Martillo  
+      {  
+      herraje:  HERRAJE  122628  
+        cantidad:  *  4  
+      }  
+    ;  
+  paso:  PASO  9  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorCruz  
+      {  
+      herraje:  HERRAJE  118331  
+        cantidad:  *  2  
+      }  
+    ;  
+  paso:  PASO  10  :  
+    instruccion:  
+      montaje:  MONTAJE  Lateral  
+      MONTAR  {  
+      pieza:  PIEZA  Lateral1  
+      ,  
+      herraje:  HERRAJE  101345  
+        cantidad:  *  2  
+      }  
+    ;  
+  paso:  PASO  11  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      montaje:  MONTAJE  Lateral  
+      }  
+    ;  
+  paso:  PASO  12  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorCruz  
+      {  
+      herraje:  HERRAJE  119252  
+        cantidad:  *  2  
+      }  
+    ;  
+  paso:  PASO  13  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      herraje:  HERRAJE  115753  
+        cantidad:  *  2  
+      }  
+    ;  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorCruz  
+      {  
+      herraje:  HERRAJE  107716  
+        cantidad:  *  4  
+      }  
+    ;  
+  paso:  PASO  14  :  
+    instruccion:  NOTA  "Cuidado al colocar el mueble, asegurese de que quede sin espacio entre los muebles"  ;  
+  paso:  PASO  15  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  Lapiz  
+      {  }  
+    ;  
+  paso:  PASO  16  :  
+    instruccion:  NOTA  "Retirar el mueble para seguir con la instalación"  ;  
+  paso:  PASO  17  :  
+    instruccion:  NOTA  "Colocar un tornillo que sirva por la ranura de la parte superior"  ;  
+  paso:  PASO  18  :  
+    instruccion:  NOTA  "Colocar de nuevo el mueble para seguir con la instalación"  ;  
+  paso:  PASO  19  :  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      CON  
+      herramienta:  HERRAMIENTA  DestornilladorPlano  
+      {  
+      herraje:  HERRAJE  103693  
+        cantidad:  *  2  
+      }  
+    ;  
+    instruccion:  
+      montaje:  MONTAJE  Smagora  
+      MONTAR  {  
+      herraje:  HERRAJE  115754  
+        cantidad:  *  2  
+      }  
+    ;  
+  <EOF>  

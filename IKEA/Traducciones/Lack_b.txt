@@ -1,0 +1,25 @@
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Martillo;
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA Lapiz;
+HERRAMIENTA Metro;
+
+HERRAJE 104323*14;
+HERRAJE 109053*9;
+HERRAJE 100001*1, Usable;
+
+
+PASO 1:
+MONTAJE Lack2 MONTAR{PIEZA Base, Soporte 1, Soporte 2, Soporte 3, Soporte 4, Soporte 5, Soporte 6,Soporte 7, HERRAJE 104323*14, HERRAJE 100001 };
+PASO 2:
+MONTAJE Lack2 CON HERRAMIENTA DestornilladorCruz {PIEZA Anclaje1, Anclaje 2, Anclaje 3,HERRAJE 109053*9, HERRAJE 100001 };
+
+PASO 3:
+NOTA “Atornillar un tornillo a un hueco del anclaje si se quiere poner en la pared”;
+
+PASO 4:
+NOTA “Atornillar mas tornillos para más seguridad, con una nivelación adecuada.”;
+
+
+PASO 5:
+NOTA “Atornillar mas tornillos para más seguridad, con una nivelación adecuada.”;

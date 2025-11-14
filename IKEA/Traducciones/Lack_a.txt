@@ -1,0 +1,18 @@
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Martillo;
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA Lapiz;
+HERRAMIENTA Metro;
+
+HERRAJE 104323*14;
+HERRAJE 109053*9;
+HERRAJE 100001*1, Usable;
+
+PASO 1:
+MONTAJE Lack MONTAR{PIEZA Base, Soporte 1, Soporte 2, Soporte 3, Soporte 4, Soporte 5, Soporte 6, HERRAJE 104323*12, HERRAJE 100001 };
+
+PASO 2:
+MONTAJE Lack MONTAR{PIEZA Soporte 7, Anclaje, HERRAJE 104323*2, HERRAJE 100001 };
+
+PASO 3:
+NOTA “Si se desea anclar a la pared, atornillar un tornillo en cada hueco del anclaje a la pared.”;
