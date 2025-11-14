@@ -1,26 +1,26 @@
 PASO 1:
-Montaje Versken MONTAR{PIEZA Bandeja 1, Anclaje 1, Anclaje 2, Anclaje 3, Anclaje 4};
+Montaje Versken MONTAR{PIEZA Bandeja 1, PIEZA Anclaje 1, PIEZA Anclaje 2, PIEZA Anclaje 3, PIEZA Anclaje 4};
 
 PASO 2:
-MONTAJE Versken MONTAR{PIEZA Barra 1, Barra 2, Barra 3, Barra 4};
+MONTAJE Versken MONTAR{PIEZA Barra 1, PIEZA Barra 2, PIEZA Barra 3, PIEZA Barra 4};
 
 PASO 3:
 MONTAJE Versken MONTAR{PIEZA Bandeja 2};
 
 PASO 4:
-MONTAJE Versken MONTAR{PIEZA Barra 5, Barra 6, Barra 7, Barra 8};
+MONTAJE Versken MONTAR{PIEZA Barra 5, PIEZA Barra 6, PIEZA Barra 7, PIEZA Barra 8};
 
 PASO 5:
 MONTAJE Versken MONTAR{PIEZA Bandeja 3};
 
 PASO 6:
-MONTAJE Versken MONTAR{PIEZA Barra 9, Barra 10, Barra 11, Barra 12};
+MONTAJE Versken MONTAR{PIEZA Barra 9, PIEZA Barra 10, PIEZA Barra 11, PIEZA Barra 12};
 
 PASO 7:
-MONTAJE Versken MONTAR{Bandeja 4};
+MONTAJE Versken MONTAR{PIEZA Bandeja 4};
 
 PASO 8:
-MONTAJE Versken MONTAR{PIEZA AnclajeSup 1, AnclajeSup 2, AnclajeSup 3, AnclajeSup 4};
+MONTAJE Versken MONTAR{PIEZA AnclajeSup 1, PIEZA AnclajeSup 2, PIEZA AnclajeSup 3, PIEZA AnclajeSup 4};
 
 PASO 9:
 NOTA “Marque con un lapiz la mitad de la altura de la bandeja superior”;
