@@ -23,13 +23,13 @@ PASOS DEL MONTAJE
 ----------------------------------------------------
 
 PASO 1:
-MONTAJE Billy{PIEZA Tabla1, Tabla2, Tabla3, TablaFina, HERRAJE 101351*16};
+MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, Tabla3, TablaFina, HERRAJE 101351*16};
 
 PASO 2:
 MONTAJE Billy CON HERRAMIENTA DestornilladorCruz{PIEZA Lado1, Lado2, HERRAJE 118331*12};
 
 PASO 3:
-MONTAJE Billy{PIEZA Tabla1, Tabla2, TablaFina, Lado1};
+MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, TablaFina, Lado1};
 NOTA "El lado rugoso de las tablas debe apuntar hacia el fondo de la estantería y los agujeros hacia debajo."
 
 PASO 4:
@@ -40,7 +40,7 @@ MONTAJE Billy CON HERRAMIENTA DestornilladorPlano{PIEZA Tabla3, HERRAJE 119081*2
 NOTA "El lado rugoso de la tabla debe apuntar hacia el fondo de la estantería y los agujeros hacia arriba."
 
 PASO 6:
-MONTAJE Billy{PIEZA Lado2};
+MONTAJE Billy MONTAR{PIEZA Lado2};
 
 PASO 7:
 MONTAJE Billy CON HERRAMIENTA DestornilladorPlano{HERRAJE 119081*6};
@@ -49,7 +49,7 @@ PASO 8:
 MONTAJE Billy CON HERRAMIENTA Lapiz{};
 
 PASO 9:
-MONTAJE Billy{PIEZA Fondo};
+MONTAJE Billy MONTAR{PIEZA Fondo};
 
 PASO 10:
 MONTAJE Billy CON HERRAMIENTA Regla{};
@@ -60,14 +60,14 @@ MONTAJE Billy CON HERRAMIENTA Martillo{HERRAJE 101201*18};
 NOTA "Poner 6 clavos en cada tabla de forma homogénea a lo largo de esta."
 
 PASO 12:
-MONTAJE Billy{HERRAJE 106989*2};
-MONTAJE Billy{HERRAJE 100823*2};
+MONTAJE Billy MONTAR{HERRAJE 106989*2};
+MONTAJE Billy MONTAR{HERRAJE 100823*2};
 NOTA "Si quieres atornillar la estantería a la pared hazlo ahora"
-MONTAJE Billy{HERRAJE 100823*2};
+MONTAJE Billy MONTAR{HERRAJE 100823*2};
 MONTAJE Billy CON HERRAMIENTA DestornilladorCruz{HERRAJE 109041*2};
 
 PASO 13:
-MONTAJE Billy{HERRAJE 131372*16};
+MONTAJE Billy MONTAR{HERRAJE 131372*16};
 
 PASO 14:
-MONTAJE Billy{PIEZA Repisa1, Repisa2, Repisa3, Repisa4, HERRAJE 131372*4};
+MONTAJE Billy MONTAR{PIEZA Repisa1, Repisa2, Repisa3, Repisa4, HERRAJE 131372*4};
