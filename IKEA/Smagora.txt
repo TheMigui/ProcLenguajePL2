@@ -1,0 +1,116 @@
+---------------------------------------------------
+PROGRAMA SMÅGÖRA
+----------------------------------------------------
+
+declaracion
+HERRAMIENTA DestornilladorCruz;
+HERRAMIENTA Martillo;
+HERRAMIENTA DestornilladorPlano;
+HERRAMIENTA Lapiz;
+HERRAMIENTA CALIBRADOR;
+
+HERRAJE 101345, 18;
+HERRAJE 118331, 18;
+HERRAJE 119252, 18;
+HERRAJE 115753, 2;
+HERRAJE 115754, 2;
+HERRAJE 122628, 4;
+HERRAJE 107716, 4;
+HERRAJE 110646, 2;
+HERRAJE 103693, 2;
+
+----------------------------------------------------
+PASOS DEL MONTAJE
+----------------------------------------------------
+
+PASO 1:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz(PIEZA Base, HERRAJE 118331, 16 );
+
+PASO 2:
+MONTAJE Smagora(PIEZA Repisa1, Repisa2, HERRAJE 101345, 8);
+
+PASO 3:
+MONTAJE Smagora(PIEZA Repisa3, Repisa4, HERRAJE 101345, 8);
+
+PASO 4:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano(HERRAJE 119252,8 );
+
+PASO 5:
+MONTAJE Smagora(PIEZA Fondo);
+
+PASO 6:
+MONTAJE Smagora(PIEZA Base2);
+
+PASO 7:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano(HERRAJE 119252,8 );
+
+PASO 8:
+MONTAJE Smagora CON HERRAMIENTA Martillo(HERRAJE 122628, 4);
+
+PASO 9:
+MONTAJE Smagora(HERRAJE 115753, 2);
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz (HERRAJE107716 ,4 );
+
+PASO 10:
+MONTAJE Smagora CON HERRAMIENTA Lapiz();
+
+
+PASO 11:
+MONTAJE Smagora(HERRAJE 110646,2);
+
+PASO 12:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano (HERRAJE103693 ,2 );
+MONTAJE Smagora(HERRAJE 115754,2);
+
+PASO 8.2:
+MONTAJE Smagora(HERRAJE 115753, 2);
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz (HERRAJE107716 ,4 );
+
+PASO 9.2:
+MONTAJE Smagora CON HERRAMIENTA Lapiz();
+
+PASO 10.2:
+MONTAJE Smagora(HERRAJE 110646,2);
+
+PASO 11.2:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano (HERRAJE103693 ,2 );
+MONTAJE Smagora(HERRAJE 115754,2);
+
+PASO 8.3:
+MONTAJE Smagora CON HERRAMIENTA Martillo(HERRAJE 122628, 4);
+
+PASO 9.3:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz( HERRAJE 118331,2);
+
+PASO 10.3:
+MONTAJE Lateral (PIEZA, Lateral1, HERRAJE 101345,2);
+
+PASO 11.3:
+MONTAJE Smagora (MONTAJE Lateral1);
+
+PASO 12.3:
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz( HERRAJE 119252,2);
+
+PASO13.3:
+MONTAJE Smagora(HERRAJE 115753, 2);
+MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz (HERRAJE 107716 ,4 );
+
+PASO14.3:
+NOTA Cuidado al colocar el mueble, asegurese de que quede sin espacio entre los muebles.
+
+PASO15.3:
+MONTAJE Smagora CON HERRAMIENTA Lapiz();
+
+PASO16.3:
+NOTA Retirar el mueble para seguir con la instalación.
+
+PASO 17.3	
+NOTA Colocar un tornillo que sirva por la ranura de la parte superior.
+
+PASO18.3:
+NOTA Colocar de nuevo el mueble para seguir con la instalación.
+
+PASO 19.3:
+
+MONTAJE Smagora CON HERRAMIENTA DestornilladorPlano (HERRAJE103693 ,2 );
+MONTAJE Smagora(HERRAJE 115754,2);
