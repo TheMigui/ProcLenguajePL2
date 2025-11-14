@@ -1,6 +1,3 @@
----------------------------------------------------
-PROGRAMA SMÅGÖRA
-----------------------------------------------------
 
 declaracion
 HERRAMIENTA DestornilladorCruz;
@@ -18,10 +15,6 @@ HERRAJE 122628, 4;
 HERRAJE 107716, 4;
 HERRAJE 110646, 2;
 HERRAJE 103693, 2;
-
-----------------------------------------------------
-PASOS DEL MONTAJE
-----------------------------------------------------
 
 PASO 1:
 MONTAJE Smagora CON HERRAMIENTA DestornilladorCruz(PIEZA Base, HERRAJE 118331, 16 );

@@ -47,49 +47,67 @@ public class MontajeAnalyzer {
     static void analizaryAcumular(String text) {
         String lower = text.toLowerCase();
 
-        int declIndex = lower.indexOf("declaracion");
-        int pasosIndex = lower.indexOf("pasos");
+        // Buscar primer PASO
+        int primerPasoIndex = lower.indexOf("paso"); // primer "PASO" en el texto
 
-        String declarationText = declIndex >= 0 && pasosIndex > declIndex
-                ? text.substring(declIndex, pasosIndex)
-                : (declIndex >= 0 ? text.substring(declIndex) : "");
+        String declarationText;
+        String pasosText;
 
-        String pasosText = pasosIndex >= 0 ? text.substring(pasosIndex) : "";
+        if (primerPasoIndex >= 0) {
+            // Todo antes del primer PASO se considera sección de declaración
+            declarationText = text.substring(0, primerPasoIndex);
+            pasosText = text.substring(primerPasoIndex);
+        } else {
+            // Si no hay PASO, todo es declaración
+            declarationText = text;
+            pasosText = "";
+        }
 
-        // Herramientas declaradas
+        // 1) herramientas declaradas
         Pattern herramientaDecl = Pattern.compile("(?i)\\bHERRAMIENTA\\s+([A-Za-z0-9_\\u00C0-\\u017F]+)\\s*;");
         Matcher mh = herramientaDecl.matcher(declarationText);
         while (mh.find()) {
-            herramientasDeclaradas.add(mh.group(1).trim());
+            String nombre = mh.group(1).trim();
+            herramientasDeclaradas.add(nombre);
         }
 
-        // Herrajes declarados
-        Pattern herrajeDecl = Pattern.compile("(?i)\\bHER+RAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?\\s*;");
+        // 2) herrajes declarados (ahora reconoce Usable con o sin número)
+        Pattern herrajeDecl = Pattern.compile(
+            "(?i)\\bHER+RAJE\\s*(\\d{1,9})" +                  // ID del herraje
+            "(?:\\s*[*,\\s]\\s*([0-9]+)?\\s*(?:,\\s*Usable)?)?" + // cantidad opcional + Usable opcional
+            "\\s*;"
+        );
         Matcher hh = herrajeDecl.matcher(declarationText);
         while (hh.find()) {
             String id = hh.group(1);
             String q = hh.group(2);
             Integer cantidad = null;
 
-            if (q != null) {
-                if (q.equalsIgnoreCase("Usable")) cantidad = -1;
-                else cantidad = Integer.parseInt(q);
+            // Detecta "Usable" en cualquier parte de la declaración
+            if (hh.group(0).toLowerCase().contains("usable")) {
+                cantidad = -1; // infinito
+            } else if (q != null) {
+                cantidad = Integer.parseInt(q);
             }
+
             herrajesDeclarados.putIfAbsent(id, new Herraje(id, cantidad));
         }
 
-        // Procesar pasos
+        // 3) dividir en pasos y analizar
         String[] pasos = pasosText.split("(?i)\\bPASO\\s+\\d+\\s*:");
         for (String pasoBlock : pasos) {
             pasoBlock = pasoBlock.trim();
             if (pasoBlock.isEmpty()) continue;
 
-            // Herramientas usadas en paso
+            // Herramientas usadas en el paso
             Pattern herramientaInStep = Pattern.compile("(?i)CON\\s+HERRAMIENTA\\s+([A-Za-z0-9_\\u00C0-\\u017F]+)");
             Matcher mhi = herramientaInStep.matcher(pasoBlock);
-            while (mhi.find()) herramientasUsadasEnPasos.add(mhi.group(1).trim());
+            while (mhi.find()) {
+                String hname = mhi.group(1).trim();
+                herramientasUsadasEnPasos.add(hname);
+            }
 
-            // Herrajes usados
+            // Herrajes usados en el paso (limpiando notas)
             String pasoSinNotas = pasoBlock.replaceAll("(?i)NOTA\\s*(\"[^\"]*\"|[^\\n\\r;]*)", "");
             Pattern herrajeAny = Pattern.compile("(?i)\\bHER+RAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?");
             Matcher mh2 = herrajeAny.matcher(pasoSinNotas);
