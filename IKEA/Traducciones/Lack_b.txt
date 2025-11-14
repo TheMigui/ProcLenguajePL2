@@ -10,9 +10,11 @@ HERRAJE 100001*1, Usable;
 
 
 PASO 1:
-MONTAJE Lack2 MONTAR{PIEZA Base, Soporte 1, Soporte 2, Soporte 3, Soporte 4, Soporte 5, Soporte 6,Soporte 7, HERRAJE 104323*14, HERRAJE 100001 };
+MONTAJE Lack2 CON HERRAJE 100001*1{PIEZA Base, PIEZA Soporte 1, PIEZA Soporte 2, PIEZA Soporte 3, PIEZA Soporte 4, PIEZA Soporte 5, PIEZA Soporte 6, PIEZA Soporte 7, HERRAJE 104323*14};
+
 PASO 2:
-MONTAJE Lack2 CON HERRAMIENTA DestornilladorCruz {PIEZA Anclaje1, Anclaje 2, Anclaje 3,HERRAJE 109053*9, HERRAJE 100001 };
+MONTAJE Lack2 CON HERRAMIENTA DestornilladorCruz {PIEZA Anclaje1, PIEZA Anclaje 2, PIEZA Anclaje 3};
+MONTAJE Lack2 CON HERRAJE 100001*1{HERRAJE 109053*9};
 
 PASO 3:
 NOTA “Atornillar un tornillo a un hueco del anclaje si se quiere poner en la pared”;

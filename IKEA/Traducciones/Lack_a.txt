@@ -9,10 +9,10 @@ HERRAJE 109053*9;
 HERRAJE 100001*1, Usable;
 
 PASO 1:
-MONTAJE Lack MONTAR{PIEZA Base, Soporte 1, Soporte 2, Soporte 3, Soporte 4, Soporte 5, Soporte 6, HERRAJE 104323*12, HERRAJE 100001 };
+MONTAJE Lack CON HERRAJE 100001*1{PIEZA Base, PIEZA Soporte 1, PIEZA Soporte 2, PIEZA Soporte 3, PIEZA Soporte 4, PIEZA Soporte 5, PIEZA Soporte 6, HERRAJE 104323*12};
 
 PASO 2:
-MONTAJE Lack MONTAR{PIEZA Soporte 7, Anclaje, HERRAJE 104323*2, HERRAJE 100001 };
+MONTAJE Lack CON HERRAJE 100001*1{PIEZA Soporte 7, PIEZA Anclaje, HERRAJE 104323*2};
 
 PASO 3:
 NOTA “Si se desea anclar a la pared, atornillar un tornillo en cada hueco del anclaje a la pared.”;
