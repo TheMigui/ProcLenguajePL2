@@ -3,7 +3,6 @@ import org.antlr.v4.runtime.tree.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.InetSocketAddress;
 
 public class WriteTree {
     public static void main(String[] args) throws Exception {
@@ -16,8 +15,8 @@ public class WriteTree {
 
             ParseTree tree = parser.prog();
 
-            writeToFile(tree.toStringTree(parser));
-            // System.out.println(tree.toStringTree(parser));
+            // writeToFile(tree.toStringTree(parser));
+            System.out.println(tree.toStringTree(parser));
             return;
         } else{
             String input = args.length > 0 ? args[0] : "\"a b\", 1\n";
