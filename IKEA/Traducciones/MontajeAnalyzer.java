@@ -105,7 +105,7 @@ public class MontajeAnalyzer {
             }
 
             // Eliminar NOTA para no contar herrajes dentro
-            String sinNotas = l.replaceAll("(?i)NOTA\\s*(\"[^\"]*\"|[^\\n\\r;]*)", "");
+            String sinNotas = l.replaceAll("NOTA\\s*(\"[^\"]*\"|[^\\n\\r;]*)", "");
 
             Matcher mh2 = herrajePaso.matcher(sinNotas);
             while (mh2.find()) {
