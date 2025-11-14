@@ -55,7 +55,7 @@ public class MontajeAnalyzer {
 
         Pattern herramientaDecl = Pattern.compile("(?i)\\bHERRAMIENTA\\s+([A-Za-z0-9_\\u00C0-\\u017F]+)\\s*;?");
         Pattern herrajeDecl = Pattern.compile("(?i)\\bHERRAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?\\s*;?");
-        Pattern herramientaPaso = Pattern.compile("(?i)CON\\s+HERRAMIENTA\\s+([A-Za-z0-9_\\u00C0-\\u017F]+)");
+        Pattern herramientaPaso = Pattern.compile("(?i)CON\\s+HERRAMIENTA\\s+([\\p{L}0-9_]+)");
         Pattern herrajePaso = Pattern.compile("(?i)\\bHERRAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?");
 
         for (String linea : lineas) {
