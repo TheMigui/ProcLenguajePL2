@@ -129,8 +129,13 @@ public class MontajeAnalyzer {
             //   HERRAJE 121030
             //   HERRAJE 122723, 6
             //   HERRRAJE 119256*2  (typo: HERRRAJE)
+            // Eliminar NOTAS antes de buscar herrajes para evitar falsos positivos
+            String pasoSinNotas = pasoBlock.replaceAll("(?i)NOTA\\s*(\"[^\"]*\"|[^\\n\\r;]*)", "");
+
+            // Buscar herrajes usados (solo sobre texto limpio)
             Pattern herrajeAny = Pattern.compile("(?i)\\bHER+RAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?");
-            Matcher mh2 = herrajeAny.matcher(pasoBlock);
+            Matcher mh2 = herrajeAny.matcher(pasoSinNotas);
+
             Map<String, Integer> usadosEnEstePaso = new LinkedHashMap<>();
             while (mh2.find()) {
                 String id = mh2.group(1);
@@ -138,22 +143,21 @@ public class MontajeAnalyzer {
                 int qty = 1;
                 if (q != null) {
                     if (q.equalsIgnoreCase("Usable")) {
-                        qty = 0; // no sumable, lo marcamos como 'usable' pero no sumaremos cantidad numerica
-                        // marcar declarado como usable si no existe
+                        qty = 0;
                         herrajesDeclarados.putIfAbsent(id, new Herraje(id, -1));
                     } else {
                         try { qty = Integer.parseInt(q); } catch (NumberFormatException e) { qty = 1; }
                     }
                 }
-                // acumular usados (si qty==0 por Usable no sumar al total numeric pero lo registramos)
+
                 if (q != null && q.equalsIgnoreCase("Usable")) {
-                    // just ensure declared is marked usable
                     herrajesDeclarados.putIfAbsent(id, new Herraje(id, -1));
                 } else {
                     usadosEnEstePaso.merge(id, qty, Integer::sum);
                     herrajesUsados.merge(id, qty, Integer::sum);
                 }
             }
+
 
             // Mostrar resumen del paso (en consola inmediatamente)
             System.out.println("Paso " + pasoNum + ":");
