@@ -53,7 +53,7 @@ public class MontajeAnalyzer {
         // Así podemos analizar línea por línea
         String[] lineas = text.split("\\R+");
 
-        Pattern herramientaDecl = Pattern.compile("(?i)\\bHERRAMIENTA\\s+([A-Za-z0-9_\\u00C0-\\u017F]+)\\s*;?");
+        Pattern herramientaDecl = Pattern.compile("(?i)\\bHERRAMIENTA\\s+(\\p{L}[\\p{L}0-9_]*)\\s*;?");
         Pattern herrajeDecl = Pattern.compile("(?i)\\bHERRAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?\\s*;?");
         Pattern herramientaPaso = Pattern.compile("(?i)CON\\s+HERRAMIENTA\\s+([\\p{L}0-9_]+)");
         Pattern herrajePaso = Pattern.compile("(?i)\\bHERRAJE\\s*(\\d{1,9})(?:\\s*[*,\\s]\\s*(\\d+|Usable))?");
