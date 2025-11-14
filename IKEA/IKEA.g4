@@ -12,7 +12,7 @@ paso
     ;
     
 instruccion
-    : montaje ('CON '(herramienta | herraje) | 'MONTAR') '(' ((pieza | herraje) (',' (pieza | herraje))*)? ')'
+    : montaje ('CON '(herramienta | herraje) | 'MONTAR') '(' ((pieza | herraje | montaje) (',' (pieza | herraje | montaje))*)? ')'
     | montaje ('CON 'herramienta)? 'FIJAR' '(' herraje ')'
     | 'NOTA ' STRING
     ;
@@ -22,7 +22,7 @@ herramienta
     ;
 
 herraje
-    : 'HERRAJE ' ID ',' cantidad
+    : 'HERRAJE ' ID cantidad
     ;
 
 pieza
@@ -34,7 +34,7 @@ montaje
     ;
 
 cantidad
-    : NUM
+    : 'x' NUM
     ;
 
 NOMBRE  : ([a-zA-Z]|' ')+ ;
