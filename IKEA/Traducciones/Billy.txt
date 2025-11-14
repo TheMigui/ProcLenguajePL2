@@ -1,8 +1,4 @@
----------------------------------------------------
-PROGRAMA BILLY
-----------------------------------------------------
 
-declaracion
 HERRAMIENTA DestornilladorPlano;
 HERRAMIENTA DestornilladorCruz;
 HERRAMIENTA Lapiz;
@@ -17,10 +13,6 @@ HERRAJE 131372*16;
 HERRAJE 109041*2;
 HERRAJE 100823*4;
 HERRAJE 106989*2;
-
-----------------------------------------------------
-PASOS DEL MONTAJE
-----------------------------------------------------
 
 PASO 1:
 MONTAJE Billy MONTAR{PIEZA Tabla1, Tabla2, Tabla3, TablaFina, HERRAJE 101351*16};
