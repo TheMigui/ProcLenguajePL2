@@ -1,8 +1,3 @@
----------------------------------------------------
-PROGRAMA BAGGEBO
-----------------------------------------------------
-
-declaracion
 HERRAMIENTA DestornilladorCruz;
 
 HERRAJE 10003068*4;
@@ -10,18 +5,14 @@ HERRAJE 10119123*38;
 HERRAJE 100827*2;
 HERRAJE 10062215*2;
 
-----------------------------------------------------
-PASOS DEL MONTAJE
-----------------------------------------------------
-
 PASO 1:
-MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Pata1, Pata2, Repisa1, HERRAJE 10119123*2};
+MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Pata1, PIEZA Pata2, PIEZA Repisa1, HERRAJE 10119123*2};
 
 PASO 2:
-MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Repisa2, Repisa3, Repisa 4, HERRAJE 10119123*6};
+MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Repisa2, PIEZA Repisa3, PIEZA Repisa 4, HERRAJE 10119123*6};
 
 PASO 3:
-MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Pata3, Pata4, HERRAJE 10119123*8};
+MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Pata3, PIEZA Pata4, HERRAJE 10119123*8};
 
 PASO 4:
 MONTAJE Baggebo CON HERRAMIENTA DestornilladorCruz{PIEZA Fondo, HERRAJE 10119123*4};
